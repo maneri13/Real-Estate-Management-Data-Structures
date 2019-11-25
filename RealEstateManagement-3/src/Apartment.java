@@ -1,6 +1,5 @@
-
 /**
- * @author Hashsham Maneri
+ * @author Hashsham Maneri 
  * The House class is a child of the RealEstate class and has an additional properties:
  * Boolean lift = indicates whether an apartment has a lift or not.
  * Int buildingFloors = indicates the total number of floors in apartment building
