@@ -8,7 +8,7 @@ public class CircularVector
 	{
 		count = 0;
 		first = 0;
-		data = new Vector(5);
+		data = new Vector(100);
 	}
 
 	public int size()
@@ -20,12 +20,13 @@ public class CircularVector
 	{
 
 		data.addFirst(element);
+		count++;
 	}
 
 	public void AddLast(Object element)
 	{
 		data.addLast(element);
-
+		count++;
 	}
 
 	public Object GetFirst()
@@ -51,7 +52,12 @@ public class CircularVector
 
 	public void RemoveLast()
 	{
-		// add your code
+		data.removeLast();
+		count--;
+	}
+	
+	public Object get(int index) {
+		return data.get(index);
 	}
 
 	public void print()

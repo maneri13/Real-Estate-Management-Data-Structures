@@ -8,13 +8,17 @@ public abstract class RealEstate implements Comparable {
 	private int noOfBedroom; // All properties are private for encapsulation
 	private int noOfBathroom;
 	private int pricePerMonth;
-	private int id;
+	private int id, visitCounter;
+	PriorityQueue visits = new PriorityQueue();
+	
+
 
 	public RealEstate(int noOfBedroom, int noOfBathroom, int pricePerMonth) {
 
 		this.noOfBedroom = noOfBedroom;
 		this.noOfBathroom = noOfBathroom;
 		this.pricePerMonth = pricePerMonth;
+		visitCounter = 0;
 	}
 
 	public int compareTo(Object o) {
@@ -51,6 +55,14 @@ public abstract class RealEstate implements Comparable {
 
 	public void setPricePerMonth(int pricePerMonth) {
 		this.pricePerMonth = pricePerMonth;
+	}
+
+	public int getVisitCounter() {
+		return visitCounter;
+	}
+	
+	public void setVisitCounter(int visitCounter) {
+		this.visitCounter = visitCounter;
 	}
 
 }

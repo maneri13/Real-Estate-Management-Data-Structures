@@ -122,49 +122,28 @@ public class LinkedList {
 
 	public void addSorted(Comparable o)
 
-	{
-
+	{	
 		// an empty list , add element in front
-
 		if (head == null)
 			head = new ListElement(o, null);
-
 		else if (head.first().compareTo(o) < 0)
-
 		{
-
 			// we have to add the element in front
-
 			head = new ListElement(o, head);
-
 		}
-
 		else
-
 		{
-
 			// we have to find the first element which is bigger
-
 			ListElement d = head;
-
 			while ((d.rest() != null) &&
-
 					(d.rest().first().compareTo(o) > 0))
-
 			{
-
 				d = d.rest();
-
 			}
-
 			ListElement next = d.rest();
-
 			d.setRest(new ListElement(o, next));
-
 		}
-
 		count++;
-
 	}
 
 }
